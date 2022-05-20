@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: monolithic-app
+  liquibase:
+    change-log: classpath:liquibase-changeLog.xml
+  datasource:
+    url: jdbc:postgresql://localhost:5431/levi9
+    password: code9
+    username: levi9
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: code9levi9
+    password: Code92021Levi9
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL94Dialect
+        jdbc:
+          lob:
+            non_contextual_creation : true
+server:
+  port: 8081
